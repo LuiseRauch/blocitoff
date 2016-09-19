@@ -8,8 +8,10 @@
       $stateProvider
         .state('home', {
             url: '/',
+            controller: 'TaskCtrl as task',
             templateUrl: '/templates/home.html'
-      });
+        });
+
     }
 
     angular
