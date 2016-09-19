@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blocitoff">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>BlocItOff Landing Page</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body>
-    <script src="/scripts/app.js"></script>
+<body >
+  <ui-view></ui-view>
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB5zszxIee4a9DZidzE-VDXdtXcIeOC7kY",
+      authDomain: "blocitoff-c9060.firebaseapp.com",
+      databaseURL: "https://blocitoff-c9060.firebaseio.com",
+      storageBucket: "blocitoff-c9060.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/controllers/TaskCtrl.js"></script>
 </body>
 </html>
