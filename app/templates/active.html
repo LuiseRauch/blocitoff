@@ -1,0 +1,20 @@
+<div ng-controller="TaskCtrl">
+  <!-- push a new task onto the array -->
+  <form ng-submit="addTask()">
+    <input ng-model="newTaskText" placeholder="Enter new task" />
+    <button type="submit">Add</button>
+  </form>
+
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Complete</th>
+      <th>Delete</th>
+    </tr>
+    <tr ng-repeat="task in tasks | expired:false ">
+      <td> <input ng-model="task.text" ng-change="tasks.$save(task)" /> </td>
+      <td><input type="checkbox" ng-click='completeTask(task)'></td>
+      <td><button ng-click="tasks.$remove(task)">Delete Task</button></td>
+    </tr>
+  </table>
+</div>

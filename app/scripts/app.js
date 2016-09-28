@@ -6,13 +6,16 @@
             requireBase: false
         });
       $stateProvider
-        .state('home', {
-            url: '/',
-            controller: 'TaskCtrl as task',
-            templateUrl: '/templates/home.html'
-        });
-
-    }
+      .state('active', {
+          url: '/',
+          controller: 'TaskCtrl as task',
+          templateUrl: '/templates/active.html'
+      }).state('history', {
+          url: '/history',
+          controller: 'TaskCtrl as task',
+          templateUrl: '/templates/history.html'
+      });
+      }
 
     angular
     .module('blocitoff', ["firebase", 'ui.router'])
