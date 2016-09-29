@@ -1,6 +1,6 @@
 <div class="container" ng-controller="TaskCtrl">
   <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-bordered table-striped">
       <tr>
         <th>Task</th>
         <th>Completed</th>
@@ -15,8 +15,18 @@
   <!-- push a new task onto the array -->
   <form class="form-inline" ng-submit="addTask()">
     <div class="form-group">
-      <input ng-model="newTaskText" class="form-control" placeholder="Enter new task" />
-      <button type="submit" class="btn btn-default">Add</button>
+      <label for="task">Task description</label>
+      <input ng-model="newTaskText" class="form-control" placeholder="Enter new task" id="task"/>
     </div>
+    <div class="form-group">
+      <label for="priority">Priority</label>
+      <select ng-model="newTaskPriority" class="form-control" placeholder="high, med, low" id="priority"/>
+        <option>high</option>
+        <option>med</option>
+        <option>low</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
   </form>
+
 </div>
