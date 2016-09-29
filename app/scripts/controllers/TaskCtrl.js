@@ -14,12 +14,8 @@
       };
 
       $scope.completeTask = function(task) {
-        // console.log(task.completed);
-        // if (task.status) {
-          // ref.child(task.$id).update({completed: !task.completed});
           task.completed = !task.completed;
           $scope.tasks.$save(task);
-        // };
       };
     }
 
