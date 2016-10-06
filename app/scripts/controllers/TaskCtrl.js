@@ -5,7 +5,6 @@
       $scope.tasks = $firebaseArray(ref);
       $scope.sortType = 'priorityCode'; // set the default sort type
       $scope.sortReverse = true;  // set the default sort order
-      $scope.sortClass = 'glyphicon glyphicon-sort';
 
       var getPriorityCode = function(priorityText) {
         var priorityCodes = {

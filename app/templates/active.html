@@ -12,7 +12,7 @@
         <td> <input ng-model="task.text" ng-change="tasks.$save(task)" /> </td>
         <td>{{task.priority}}</td>
         <td><input type="checkbox" class="checkbox" ng-click='completeTask(task)'></td>
-        <td><button class="btn btn-default" ng-click="tasks.$remove(task)">Delete Task</button></td>
+        <td><button class="btn btn-default" ng-click="tasks.$remove(task)"><span class="glyphicon glyphicon-trash"></span></button></td>
       </tr>
     </table>
   </div>
